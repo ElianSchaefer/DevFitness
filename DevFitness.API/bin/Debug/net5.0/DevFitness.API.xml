@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevFitness.API</name>
+    </assembly>
+    <members>
+        <member name="M:DevFitness.API.Controllers.UsersController.Get(System.Int32)">
+            <summary>
+            Retornar detalhes de usuário.
+            </summary>
+            <param name="id">Identificados de usuário.</param>
+            <returns>objeto de detalhes de usuário.</returns>
+            <response code="404">Usuário não encontrado.</response>
+            <response code="200">Usuário encontrado com sucesso.</response>
+        </member>
+        <member name="M:DevFitness.API.Controllers.UsersController.Post(DevFitness.API.Models.InputModels.CreateUserInputModel)">
+            <summary>
+            Cadastrar um usuario.
+            </summary>
+            <remarks>
+            Requisição de exemplo:
+            {
+            "fullName": "Elian"
+            "height": 1.85,
+            "Weight": 85,
+            "birthDate": "1995-12-27 00:00:00"
+            }
+            </remarks>
+            <param name="inputModel">Objeto com dados de cadastro de um Usuário.</param>
+            <returns>Objeto recem criado.</returns>
+            <response code="201">Objeto criado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+        </member>
+    </members>
+</doc>
